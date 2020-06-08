@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/varld/specks/blob/master/readme.md#getting-started">Getting Started</a>
   <span>&nbsp;&nbsp;&nbsp;</span>
-  <a href="https://github.com/varld/specs/blob/master/readme.md#actions-and-the-initializer-function">Actions</a>
+  <a href="https://github.com/varld/specks/blob/master/readme.md#actions-and-the-initializer-function">Actions</a>
   <span>&nbsp;&nbsp;&nbsp;</span>
   <a href="https://codesandbox.io/s/specks-example-61eeh">Codesandbox</a>
 </p>
