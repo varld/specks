@@ -1,9 +1,6 @@
 import { useEffect, useRef, useReducer } from 'react';
 
-type StoreInitializer<T> = (manipulation: {
-  get(): T;
-  set(diff: Partial<T>): void;
-}) => T;
+type StoreInitializer<T> = (manipulation: { get(): T; set(diff: Partial<T>): void }) => T;
 
 type EqualsFn = (a: any, b: any) => boolean;
 

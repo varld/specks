@@ -17,9 +17,7 @@ describe('react api', () => {
 
       useEffect(() => state.add(), []);
 
-      return (
-        <p>count is { state.count }</p>
-      );
+      return <p>count is {state.count}</p>;
     };
 
     render(<Component />);
@@ -40,9 +38,7 @@ describe('react api', () => {
 
       useEffect(() => add(), []);
 
-      return (
-        <p>count is { count }</p>
-      );
+      return <p>count is {count}</p>;
     };
 
     render(<Component />);
@@ -63,8 +59,8 @@ describe('react api', () => {
 
       return (
         <div>
-          <p role="count">count is { count }</p>
-          <button onClick={ () => add(10) }>add 10</button>
+          <p role="count">count is {count}</p>
+          <button onClick={() => add(10)}>add 10</button>
         </div>
       );
     };
@@ -74,4 +70,4 @@ describe('react api', () => {
     fireEvent.click(screen.getByText('add 10'));
     expect(screen.getByRole('count')).toHaveTextContent('count is 11');
   });
-})
+});

@@ -1,4 +1,4 @@
-import { createStore } from '../src'
+import { createStore } from '../src';
 
 describe('basic api', () => {
   test('initial state can be accessed', () => {
@@ -29,28 +29,29 @@ describe('basic api', () => {
     let { store } = createStore(({ get, set }) => ({
       hello: 'world',
       action: (param: string) => {
-        set({ hello: `${ get().hello } and ${ param }` });
+        set({ hello: `${get().hello} and ${param}` });
       }
     }));
 
     expect(store.getState().hello).toEqual('world');
-    store.getState().action('mars')
+    store.getState().action('mars');
     expect(store.getState().hello).toEqual('world and mars');
   });
 
   test('state can be set using async actions', async () => {
     let { store } = createStore(({ get, set }) => ({
       hello: 'world',
-      action: (param: string) => new Promise((resolve, reject) => {
-        setTimeout(() => {
-          set({ hello: `${ get().hello } and ${ param }` });
-          resolve();
-        }, 100);
-      })
+      action: (param: string) =>
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            set({ hello: `${get().hello} and ${param}` });
+            resolve();
+          }, 100);
+        })
     }));
 
     expect(store.getState().hello).toEqual('world');
-    await store.getState().action('mars')
+    await store.getState().action('mars');
     expect(store.getState().hello).toEqual('world and mars');
   });
-})
+});
